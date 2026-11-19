@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum Atlas — GTA VI trophy guide &amp; tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: cited guides, a 7-stage platinum roadmap, missable warnings and saved progress.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23f5b942'/%3E%3Ctext x='32' y='42' font-size='28' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='%2314100a'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="top">
+  <div class="brand">
+    <div class="mark" aria-hidden="true">LPA</div>
+    <div>
+      <h1>Leonida Platinum Atlas</h1>
+      <p class="sub">GTA VI &middot; PS5 trophy guide &amp; tracker &mdash; offline, no account, no ads</p>
+    </div>
+  </div>
+  <div class="head-stats">
+    <div class="big-count"><strong id="earnedBig">0/55</strong><span id="earnedPct">0%</span></div>
+    <div class="head-bar"><div id="earnedBar"></div></div>
+    <div class="grade-chips" id="gradeChips"></div>
+  </div>
+  <div class="head-actions">
+    <button id="spoilerBtn" type="button" class="toggle on" title="Hide the names and descriptions of hidden story trophies until they are earned">Spoilers hidden &middot; 28</button>
+    <button id="exportBtn" type="button">Export</button>
+    <label class="import-btn">Import<input id="importFile" type="file" accept="application/json,.json"></label>
+  </div>
+</header>
+
+<div id="auditBar" class="audit" role="status"></div>
+
+<div id="missableBanner" class="banner" role="alert">
+  <span class="warn-dot" aria-hidden="true">!</span>
+  <p><strong>1 missable trophy: Positive Mental Attitude</strong> &mdash; the Chapter 1 balcony meditation at Jason&rsquo;s house disappears after Chapter 1. Do it to be safe and keep a Chapter 1 save.</p>
+  <button id="bannerShow" type="button">Show it</button>
+</div>
+
+<nav id="tabs" aria-label="Guide sections">
+  <button type="button" data-tab="checklist" class="active">Checklist</button>
+  <button type="button" data-tab="roadmap">Platinum roadmap</button>
+  <button type="button" data-tab="missables">Missables <span class="count-badge">1</span></button>
+  <button type="button" data-tab="nextup">Next up</button>
+  <button type="button" data-tab="progress">Progress &amp; export</button>
+  <span id="savedNote" class="saved-note">&#10003; Saved in this browser</span>
+</nav>
+
+<div id="roadmapStrip" class="strip" aria-label="Roadmap at a glance"></div>
+
+<div id="filters" class="filters">
+  <div id="kindChips" class="chips" role="group" aria-label="Filter by kind"></div>
+  <label class="sel">Grade
+    <select id="gradeSel">
+      <option value="all">All</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="sel">Show
+    <select id="earnedSel">
+      <option value="all">All trophies</option>
+      <option value="todo">To do only</option>
+      <option value="earned">Earned only</option>
+    </select>
+  </label>
+  <label class="sel">
+    <select id="sortSel">
+      <option value="roadmap">Roadmap</option>
+      <option value="name">Name A&ndash;Z</option>
+      <option value="grade">Grade (best first)</option>
+      <option value="difficulty">Difficulty</option>
+    </select>
+  </label>
+</div>
+
+<main id="main">
+  <section id="listPane" aria-label="Trophy checklist">
+    <div id="listHead" class="list-head"><span id="listHeadText"></span>
+      <label class="search">Search <span class="kbd">/</span>
+        <input id="searchInput" type="search" placeholder="Search trophies, guides&hellip;" autocomplete="off">
+      </label>
+    </div>
+    <div id="list"></div>
+  </section>
+  <aside id="detailPane" aria-label="Selected trophy"></aside>
+</main>
+
+<section id="tabPane" class="tab-pane" hidden></section>
+
+<footer>
+  <p>Unofficial fan guide &mdash; not affiliated with Rockstar Games or Sony. Trophy names, descriptions and grades are as PlayStation publishes them; guides are written in our own words for this entry and cite their sources beside each trophy. Sources retrieved 19 Nov 2026.</p>
+  <p id="footSources"></p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
